@@ -55,7 +55,7 @@ setxkbmap -option 'grp:alt_shift_toggle
 1. LED подсветка для клавиш и мышки: [rogauracore](https://github.com/wroberts/rogauracore), piper(вроде как можно установить из любого пакетного менеджера, покрайней мери на Ubuntu/Arch/PopOS/Manjaro/Debian(?)/Void Linux, так что не привожу никаких ссылок).
 0. Офиссный пакет: [OnlyOffice](https://flathub.org/apps/details/org.onlyoffice.desktopeditors)
 0. Графическая часть: 
-    - i3wm + i3status(оконный менеджер) 
+    - i3wm + i3status + i3-gaps(оконный менеджер) 
     - feh(для обоев) 
     - xorg(штучка для запуска всяких графических интерфейсов, ну ещё есть wayland, в котором по дефолту нет тиринга, но он пока-что ещё сырой, и там вроде какие-то траблы с nvidia, хотя я играл в watchdogs 2, через lutris, вроде как производительность одна и таже, что на винде) 
     - nvidia-driver(драйвера nvidia)
