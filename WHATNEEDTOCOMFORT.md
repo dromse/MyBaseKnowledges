@@ -51,19 +51,25 @@ setxkbmap -option 'grp:alt_shift_toggle'`
 1. Текстовый редактор: neovim
 1. Программа для скриншотов:
 1. LED подсветка для клавиш и мышки: [rogauracore](https://github.com/wroberts/rogauracore), piper(вроде как можно установить из любого пакетного менеджера, покрайней мери на Ubuntu/Arch/PopOS/Manjaro/Debian(?)/Void Linux, так что не привожу никаких ссылок).
-0. Офисс пакет: [OnlyOffice](https://flathub.org/apps/details/org.onlyoffice.desktopeditors)
+0. Офиссный пакет: [OnlyOffice](https://flathub.org/apps/details/org.onlyoffice.desktopeditors)
 0. Графическая часть: 
     - i3wm + i3status(оконный менеджер) 
     - feh(для обоев) 
-    - xorg(штучка для запуска всяких графических интерфейсов, ну ещё есть wayland, в котором по дефолту нет тиринга, но он пока-что ещё сырой, и там вроде какик-то траблы с nvidia, хотя я играл в watchdogs 2, через lutris, вроде как производительность одна и таже что и на винде) 
-    - nvidia-driver
+    - xorg(штучка для запуска всяких графических интерфейсов, ну ещё есть wayland, в котором по дефолту нет тиринга, но он пока-что ещё сырой, и там вроде какие-то траблы с nvidia, хотя я играл в watchdogs 2, через lutris, вроде как производительность одна и таже, что на винде) 
+    - nvidia-driver(драйвера nvidia)
     - lightdm(оконный менеджер)
 0. Программа читалка(для pdf, fb2 и тд.): Okular
 0. Менеджер виртуальных машин: QEMU, VirtualBox
-0. Color Picker
+0. Палитра цветов: Color Picker
 
 ## Настройка NEOVIM'a
-Пока-что пусто...
+``
+# rows number
+set number
+
+# 4 space in one tab
+set expandtab
+`` 
 
 ## Настройка i3wm, lightdm, polybar
 Пока-что пусто..
