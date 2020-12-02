@@ -49,16 +49,16 @@ setxkbmap -option 'grp:alt_shift_toggle
 `nameserver 8.8.8.8`  
 
 ## Приложения:
-1. Файловый менеджер: Thunar, vifm
-1. Терминал: Alacritty
-1. Shell: ..
-1. Браузер: Firefox
+1. Файловый менеджер: ranger
+1. Терминал: st
+1. Оболочка терминала: bash
+1. Браузер: firefox
 1. Текстовый редактор: neovim
-1. Программа для скриншотов:
+1. Программа для скриншотов: spectecle
 1. LED подсветка для клавиш и мышки: [rogauracore](https://github.com/wroberts/rogauracore), piper(вроде как можно установить из любого пакетного менеджера, покрайней мери на Ubuntu/Arch/PopOS/Manjaro/Debian(?)/Void Linux, так что не привожу никаких ссылок).
 0. Офиссный пакет: [OnlyOffice](https://flathub.org/apps/details/org.onlyoffice.desktopeditors)
 0. Графическая часть: 
-    - i3wm + i3status + i3-gaps(оконный менеджер) 
+    - i3wm + polybar + i3-gaps(оконный менеджер) 
     - feh(для обоев) 
     - xorg(штучка для запуска всяких графических интерфейсов, ну ещё есть wayland, в котором по дефолту нет тиринга, но он пока-что ещё сырой, и там вроде какие-то траблы с nvidia, хотя я играл в watchdogs 2, через lutris, вроде как производительность одна и таже, что на винде) 
     - nvidia-driver(драйвера nvidia)
