@@ -7,8 +7,10 @@
 
 ## Решениe проблем:
 ### Переключение клавиатуры:
-`setxkbmap -layout us,ru,ua  
-setxkbmap -option 'grp:alt_shift_toggle'`
+```
+setxkbmap -layout us,ru,ua  
+setxkbmap -option 'grp:alt_shift_toggle
+```
 
 ### Нет звука:
 Проверьте есть ли pulseaudio или alsa, если нет то установите их.  
