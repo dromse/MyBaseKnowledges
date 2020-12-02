@@ -42,7 +42,7 @@ setxkbmap -option 'grp:alt_shift_toggle
 1. NetworkManager  
 1. wpa_supplicant
 
-Если второе, то нужно настроить DNS в resolv.conf прописав внутрь файла какой-то адресс DNS сервера, например DNS адресс гугла 8.8.8.8:  
+Если второе, то потребуется настроить DNS в resolv.conf прописав внутрь файла какой-то адресс DNS сервера, например DNS адресс гугла 8.8.8.8:  
 `nameserver 8.8.8.8`  
 
 ## Приложения:
