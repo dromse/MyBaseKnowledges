@@ -68,7 +68,7 @@ setxkbmap -option 'grp:alt_shift_toggle
 0. Палитра цветов: Color Picker
 
 ## Настройка NEOVIM'a
-#### Первоначальная настройка
+### Первоначальная настройка
 ```
 # rows number
 set number
@@ -76,8 +76,21 @@ set number
 # 4 space in one tab
 set expandtab
 ```
-#### Работа с плагинами
+### Работа с плагинами
 Установить [plug-vim](https://github.com/junegunn/vim-plug) для работы с плагинами.  
+### Плагины
+#### Древо файлов
+```
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle'}
+------------------------------------------------------
+" mapping
+map <C-n> :NERDTreeToggle<CR>
+```
+#### Автокомплит для символов 
+```
+" ''``{}()[]
+Plug 'townk/vim-autoclose'
+```
 
 ## Настройка i3wm, lightdm, polybar
 Пока-что пусто..
