@@ -51,7 +51,7 @@ setxkbmap -option 'grp:alt_shift_toggle'`
 1. Текстовый редактор: neovim
 1. Программа для скриншотов:
 1. LED подсветка для клавиш и мышки: [rogauracore](https://github.com/wroberts/rogauracore), piper(вроде как можно установить из любого пакетного менеджера, покрайней мери на Ubuntu/Arch/PopOS/Manjaro/Debian(?)/Void Linux, так что не привожу никаких ссылок).
-0. Офисс пакет: (OnlyOffice)[https://flathub.org/apps/details/org.onlyoffice.desktopeditors]
+0. Офисс пакет: [OnlyOffice](https://flathub.org/apps/details/org.onlyoffice.desktopeditors)
 0. Графическая часть: 
     - i3wm + i3status(оконный менеджер) 
     - feh(для обоев) 
