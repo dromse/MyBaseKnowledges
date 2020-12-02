@@ -63,13 +63,13 @@ setxkbmap -option 'grp:alt_shift_toggle'`
 0. Палитра цветов: Color Picker
 
 ## Настройка NEOVIM'a
-``
+```
 # rows number
 set number
 
 # 4 space in one tab
 set expandtab
-`` 
+```
 
 ## Настройка i3wm, lightdm, polybar
 Пока-что пусто..
