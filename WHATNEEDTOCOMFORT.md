@@ -6,6 +6,7 @@
 
 
 ## Решениe проблем:
+
 ### Переключение клавиатуры:
 ```
 setxkbmap -layout us,ru,ua  
@@ -18,6 +19,8 @@ setxkbmap -option 'grp:alt_shift_toggle
 `pulseaudio -D`  
 Если звук отсутсвует после перезагрузки то, пропишите в конфигах запуск пульса, например как у меня в конфиге i3wm:  
 `exec "pulseaudio -D"`
+### Починка качества звука:
+Решение по [ссылке](https://www.opennet.ru/tips/3141_pulseaudio_alsa_linux_sound_audio.shtml)  
 
 ### Обои в оконных менеджерах:
 Установить feh.  
@@ -46,16 +49,16 @@ setxkbmap -option 'grp:alt_shift_toggle
 `nameserver 8.8.8.8`  
 
 ## Приложения:
-1. Файловый менеджер: Thunar, vifm
-1. Терминал: Alacritty
-1. Shell: ..
-1. Браузер: Firefox
+1. Файловый менеджер: ranger
+1. Терминал: st
+1. Оболочка терминала: bash
+1. Браузер: firefox
 1. Текстовый редактор: neovim
-1. Программа для скриншотов:
+1. Программа для скриншотов: spectecle
 1. LED подсветка для клавиш и мышки: [rogauracore](https://github.com/wroberts/rogauracore), piper(вроде как можно установить из любого пакетного менеджера, покрайней мери на Ubuntu/Arch/PopOS/Manjaro/Debian(?)/Void Linux, так что не привожу никаких ссылок).
 0. Офиссный пакет: [OnlyOffice](https://flathub.org/apps/details/org.onlyoffice.desktopeditors)
 0. Графическая часть: 
-    - i3wm + i3status + i3-gaps(оконный менеджер) 
+    - i3wm + polybar + i3-gaps(оконный менеджер) 
     - feh(для обоев) 
     - xorg(штучка для запуска всяких графических интерфейсов, ну ещё есть wayland, в котором по дефолту нет тиринга, но он пока-что ещё сырой, и там вроде какие-то траблы с nvidia, хотя я играл в watchdogs 2, через lutris, вроде как производительность одна и таже, что на винде) 
     - nvidia-driver(драйвера nvidia)
@@ -65,7 +68,7 @@ setxkbmap -option 'grp:alt_shift_toggle
 0. Палитра цветов: Color Picker
 
 ## Настройка NEOVIM'a
-#### Первоначальная настройка
+### Первоначальная настройка
 ```
 # rows number
 set number
@@ -73,8 +76,21 @@ set number
 # 4 space in one tab
 set expandtab
 ```
-#### Работа с плагинами
+### Работа с плагинами
 Установить [plug-vim](https://github.com/junegunn/vim-plug) для работы с плагинами.  
+### Плагины
+#### Древо файлов
+```
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle'}
+------------------------------------------------------
+" mapping
+map <C-n> :NERDTreeToggle<CR>
+```
+#### Автокомплит для символов 
+```
+" ''``{}()[]
+Plug 'townk/vim-autoclose'
+```
 
 ## Настройка i3wm, lightdm, polybar
 ### Настрока i3wm
