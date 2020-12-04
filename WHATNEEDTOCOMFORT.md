@@ -77,4 +77,28 @@ set expandtab
 Установить [plug-vim](https://github.com/junegunn/vim-plug) для работы с плагинами.  
 
 ## Настройка i3wm, lightdm, polybar
-Пока-что пусто..
+### Настрока i3wm
+
+### Настройка lightdm
+
+### Настройка polybar
+#### launch.sh
+Помещаем код:  
+```
+#!/usr/bin/env bash
+name=example
+pkill polybar
+if type "xrandr"; then
+    for monitor in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+        MONITOR=${monitor} polybar --reload ${name}&
+    done
+else
+    polybar --reload ${name} &
+fi
+```
+
+## Интересные штуки
+#### Узнаем сколько уже установлена система
+```
+dumpe2fs $(mount | grep 'on \/ ' | awk '{print $1}') | grep 'Filesystem created:'
+```
