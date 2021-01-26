@@ -48,10 +48,25 @@ setxkbmap -option 'grp:alt_shift_toggle
 Если второе, то потребуется настроить DNS в resolv.conf прописав внутрь файла какой-то адресс DNS сервера, например DNS адресс гугла 8.8.8.8:  
 `nameserver 8.8.8.8`  
 
+### Firefox не открывает ranger
+#### Выполняем следущие команды:  
+```
+cp /usr/share/applications/ranger.desktop ~/.local/share/applications/ranger.desktop 
+vim ~/.local/share/applications/ranger.desktop
+```  
+#### Изменить эти параметры:
+
+```
+Terminal=false
+Exec=alacritty -e ranger
+```  
+#### И в конце вводим в терминал:
+`update-desktop-database ~/.local/share/applications`
+
 ## Приложения:
 1. Файловый менеджер: ranger
-1. Терминал: st
-1. Оболочка терминала: bash
+1. Терминал: st, alacrity
+1. Оболочка терминала: bash, fish
 1. Браузер: firefox
 1. Текстовый редактор: neovim
 1. Программа для скриншотов: spectecle
@@ -63,9 +78,10 @@ setxkbmap -option 'grp:alt_shift_toggle
     - xorg(штучка для запуска всяких графических интерфейсов, ну ещё есть wayland, в котором по дефолту нет тиринга, но он пока-что ещё сырой, и там вроде какие-то траблы с nvidia, хотя я играл в watchdogs 2, через lutris, вроде как производительность одна и таже, что на винде) 
     - nvidia-driver(драйвера nvidia)
     - lightdm(оконный менеджер)
-0. Программа читалка(для pdf, fb2 и тд.): Okular
+0. Программа читалка(для pdf, fb2 и тд.): Okular, Zathura
 0. Менеджер виртуальных машин: QEMU, VirtualBox
 0. Палитра цветов: Color Picker
+0. Аудио: alsa-utils, pulseaudio, pulseaudio-utils
 
 ## Настройка NEOVIM'a
 ### Первоначальная настройка
