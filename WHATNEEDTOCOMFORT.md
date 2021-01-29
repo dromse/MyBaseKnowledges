@@ -6,7 +6,11 @@
 
 
 ## Решениe проблем:
-
+### Монтирование дополнительного диска на ntfs
+```
+# /dev/sda1
+ 11 /dev/sda1   /home/sshd  ntfs        nls-utf8,umask-0222,uid-1000,gid-1000,rw    0 0
+```
 ### Переключение клавиатуры:
 ```
 setxkbmap -layout us,ru,ua  
