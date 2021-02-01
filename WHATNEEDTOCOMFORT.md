@@ -13,6 +13,16 @@ setxkbmap -layout us,ru,ua
 setxkbmap -option 'grp:alt_shift_toggle
 ```
 
+### Ускорить передвижения по тексту
+```
+xset r rate 500 50
+```
+
+### Поменять местами esc и caps
+ ```
+ setxkbmap -option caps:swapescape
+ ```
+
 ### Нет звука:
 Проверьте есть ли pulseaudio или alsa, если нет то установите их.  
 Если звука нет, попробуйте запустить pulseaudio:  
