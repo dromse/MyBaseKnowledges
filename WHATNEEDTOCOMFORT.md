@@ -102,6 +102,9 @@ update-desktop-database ~/.local/share/applications
 
 ## Оптимизация ( в процессе... )
 ### Установка Zen ядра 
+```
+sudo pacman -S linux-zen linux-zen-headers
+```
 ### Zramswap
 ### Ananicy
 ### Irqbalance
