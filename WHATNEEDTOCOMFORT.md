@@ -8,7 +8,7 @@
 ## Решениe проблем:
 ### Насройка nvidia и lightdm
 [Установка nvidia и optimus](https://www.youtube.com/watch?v=jncc3QL8RWI)  
-[Решение для lightdm](https://wiki.archlinux.org/title/NVIDIA_Optimus#LightDM)
+[Решение для lightdm от черного экрана](https://wiki.archlinux.org/title/NVIDIA_Optimus#LightDM)
 
 ### Изменение яркости экрана
 ```
