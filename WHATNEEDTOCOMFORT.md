@@ -6,20 +6,23 @@
 
 
 ## Решениe проблем:
-### Насройка nvidia и lightdm
-[Установка nvidia и optimus](https://www.youtube.com/watch?v=jncc3QL8RWI)  
-[Решение для lightdm от черного экрана](https://wiki.archlinux.org/title/NVIDIA_Optimus#LightDM)
+### Настройка `Nvidia` и `LightDM`
+- [Гайд](https://www.youtube.com/watch?v=jncc3QL8RWI) по установке `Nvidia` драйверов  
+- [Гайд](https://wiki.archlinux.org/title/NVIDIA_Optimus#LightDM) по устранению черного экрана после установки `Nvidia` драйверов для `LightDM`  
+ 
 
 ### Изменение яркости экрана
 ```
+sudo pacman -S brightnessctl
 brightnessctl s 0-100%
 ```
 
-### Монтирование дополнительного диска на ntfs
+### Монтирование дополнительного диска на `ntfs`
+Установить драйвер для файловой системы `ntfs`
 ```
 sudo pacman -S ntfs-3g
 ```
-В файле /etc/fstab добавить строчку с вашим диском и папкой монтирования  
+В файле `/etc/fstab` добавить строчку с вашим диском и папкой монтирования  
 
 ```
 # /dev/sda1
@@ -36,23 +39,20 @@ setxkbmap -option 'grp:alt_shift_toggle
 xset r rate 500 50
 ```
 
-### Поменять местами esc и caps
+### Поменять местами `esc` и `caps`
  ```
  setxkbmap -option caps:swapescape
  ```
 
 ### Нет звука:
-Проверьте есть ли pulseaudio или alsa, если нет то установите их.  
-Если звука нет, попробуйте запустить pulseaudio:  
+Установить пакеты `alsa` и `alsa-utils`
 ```
-pulseaudio -D
-```  
-Если звук отсутсвует после перезагрузки то, пропишите в конфигах запуск пульса, например как у меня в конфиге i3wm:  
+sudo pacman -S alsa alsa-utils
 ```
-exec "pulseaudio -D"
+Перезагрузить систему
 ```
-
-Поправочка: на Arch хватает просто установить пакеты из репозитория, и дальше все само подхватывается, ну или после перезагрузки ПК.
+reboot
+```
 
 ### Починка качества звука:
 Решение по [ссылке](https://www.opennet.ru/tips/3141_pulseaudio_alsa_linux_sound_audio.shtml)  
@@ -71,26 +71,23 @@ ln -s /var/lib/flatpak/exports/bin/com.discordapp.Discord /usr/bin/discord
 ```
 
 ### Избавление от тиринга:
-Установить picom.  
+Установить `picom`.  
 Если есть траблы, то проверить создался ли конфигурационый файл с дефолтными настрйками, если нет, то создайте его.  
-Также если picom не видить файл конфигурации то, укажите к нему путь:  
+Или если `picom` не видить файл конфигурации то, укажите к нему путь:  
 ```
 picom --config КОНФИГ_ФАЙЛ
 ```
 
-Поправочка: Или установить чтобы оконный менеджер запускался с дискретной видеокартой.
+P.S: Старт через дискретную видеокарту автоматически избавляет от тиринга.
 
 ### Отсутсвует подключение к wifi:
-Тут два варианта: или вы реально не подключены, или у вас не настроен DNS   
-Если первое, то надо настроить подключение к wifi, есть куча способов как это сделать в инете, но на всякий случай приведу пару ссылок:  
-Ссылки утонули ищите их сами.
-
-Если второе, то потребуется настроить DNS в resolv.conf прописав внутрь файла какой-то адресс DNS сервера, например DNS адресс гугла 8.8.8.8:  
+Тут два варианта: или вы реально не подключены, или у вас не настроен `DNS`   
+Если второе, то потребуется настроить `DNS` в `/etc/resolv.conf` прописав внутрь файла какой-то адресс `DNS` сервера, например `DNS` адресс гугла 8.8.8.8:  
 ```
 nameserver 8.8.8.8
 ```  
 
-### Firefox не открывает ranger
+### `Firefox` не открывает `ranger`
 #### Выполняем следущие команды:  
 ```
 cp /usr/share/applications/ranger.desktop ~/.local/share/applications/ranger.desktop 
@@ -108,7 +105,7 @@ update-desktop-database ~/.local/share/applications
 ```
 
 ## Оптимизация ( в процессе... )
-### Установка Zen ядра 
+### Установка `Zen` ядра 
 ```
 sudo pacman -S linux-zen linux-zen-headers
 ```
@@ -116,73 +113,6 @@ sudo pacman -S linux-zen linux-zen-headers
 ### Ananicy
 ### Irqbalance
 
-## Приложения:
-1. Файловый менеджер: ranger
-1. Терминал: st, alacrity
-1. Оболочка терминала: bash, fish
-1. Браузер: firefox
-1. Текстовый редактор: neovim
-1. Программа для скриншотов: spectecle
-1. LED подсветка для клавиш и мышки: [rogauracore](https://github.com/wroberts/rogauracore), piper(вроде как можно установить из любого пакетного менеджера, покрайней мери на Ubuntu/Arch/PopOS/Manjaro/Debian(?)/Void Linux, так что не привожу никаких ссылок).
-0. Офиссный пакет: [OnlyOffice](https://flathub.org/apps/details/org.onlyoffice.desktopeditors)
-0. Графическая часть: 
-    - i3wm + polybar + i3-gaps(оконный менеджер) 
-    - feh(для обоев) 
-    - xorg(штучка для запуска всяких графических интерфейсов, ну ещё есть wayland, в котором по дефолту нет тиринга, но он пока-что ещё сырой, и там вроде какие-то траблы с nvidia, хотя я играл в watchdogs 2, через lutris, вроде как производительность одна и таже, что на винде) 
-    - nvidia-driver(драйвера nvidia)
-    - lightdm(оконный менеджер)
-0. Программа читалка(для pdf, fb2 и тд.): Okular, Zathura
-0. Менеджер виртуальных машин: QEMU, VirtualBox
-0. Палитра цветов: Color Picker
-0. Аудио: alsa-utils, pulseaudio, pulseaudio-utils
-
-## Настройка NEOVIM'a
-### Первоначальная настройка
-```
-# rows number
-set number
-
-# 4 space in one tab
-set expandtab
-```
-### Работа с плагинами
-Установить [plug-vim](https://github.com/junegunn/vim-plug) для работы с плагинами.  
-### Плагины
-#### Древо файлов
-```
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle'}
-------------------------------------------------------
-" mapping
-map <C-n> :NERDTreeToggle<CR>
-```
-#### Автокомплит для символов 
-```
-" ''``{}()[]
-Plug 'townk/vim-autoclose'
-```
-
-## Настройка i3wm, lightdm, polybar
-### Настрока i3wm
-#### Монтирование дисков на главном экране
-#### Подключение wifi на главном экране
-
-### Настройка lightdm
-
-### Настройка polybar
-#### launch.sh
-Помещаем код:  
-```
-#!/usr/bin/env bash
-name=example
-pkill polybar
-if type "xrandr"; then
-    for monitor in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-        MONITOR=${monitor} polybar --reload ${name}&
-    done
-else
-    polybar --reload ${name} &
-fi
-```
 
 ## Интересные штуки
 #### Узнаем сколько уже установлена система
