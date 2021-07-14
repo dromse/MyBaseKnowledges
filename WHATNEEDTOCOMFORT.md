@@ -6,6 +6,9 @@
 
 
 ## Решениe проблем:
+### Создание no-internet группы и запуск приложений через неё
+- [Гайд](https://serverfault.com/questions/550276/how-to-block-internet-access-to-certain-programs-on-linux)
+
 ### Настройка `Nvidia` и `LightDM`
 - [Гайд](https://www.youtube.com/watch?v=jncc3QL8RWI) по установке `Nvidia` драйверов  
 - [Гайд](https://wiki.archlinux.org/title/NVIDIA_Optimus#LightDM) по устранению черного экрана после установки `Nvidia` драйверов для `LightDM`  
